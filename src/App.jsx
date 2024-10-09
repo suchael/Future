@@ -8,6 +8,7 @@ import Placeorder from "./pages/Placeorder";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Order from "./pages/Order";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]
 "
     >
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />

@@ -2,17 +2,17 @@
 import logo from "./logo.png";
 // for  img effect
 import cybertwinplus from "./cybertwin plus.png";
-import photoeffect1 from "./photoeffect1png";
+import photoeffect1 from "./photoeffect1.png";
 // gadgets
-import iphone1 from "./phone_1.png";
-import iphone3 from "./phone3.png";
-import iphone4 from "./phone4.png";
-import iphone5 from "./phone5.png";
-import iphone6 from "./phone6.png";
+import iphone1 from "./iphone1.png";
+import iphone3 from "./iphone3.png";
+import iphone4 from "./iphone4.png";
+import iphone5 from "./iphone5.png";
+import iphone6 from "./iphone6.png";
 import laptop1 from "./laptop1.png";
 import laptop2 from "./laptop2.png";
-import smartwatch1 from "./ smartwatch1.png";
-import smartwatch2 from "./ smartwatch2.png";
+import smartwatch1 from "./smartwatch1.png";
+import smartwatch2 from "./smartwatch2.png";
 import headset1 from "./headset1.png";
 import headset2 from "./headset2.png";
 import xiaomi from "./xiaomi.png";
