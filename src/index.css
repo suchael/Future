@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* font-family: "Montserrat", sans-serif;
+font-family: "Abril Fatface", serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: linear-gradient(0deg, #460364 0%, #460364 100%), #0b4ca2;
+  overflow: hidden;
+}
+html {
+  font-size: 10px;
 }
