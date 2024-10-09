@@ -7,7 +7,12 @@ font-family: "Abril Fatface", serif; */
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(0deg, #460364 0%, #460364 100%), #0b4ca2;
+  background-image: url("./assets/background.png"); /* Set the background image */
+  background-size: cover; /* Make sure the image covers the whole page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh; /* Set height to 100% of the viewport */
+  margin: 0;
   overflow: hidden;
 }
 html {

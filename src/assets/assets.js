@@ -1,7 +1,7 @@
 //logo
 import logo from "./logo.png";
 // for  img effect
-import cybertwinplus from "./cybertwin plus.png";
+
 import photoeffect1 from "./photoeffect1.png";
 // gadgets
 import iphone1 from "./iphone1.png";
@@ -23,7 +23,7 @@ import ticktick from "./ticktick.png";
 
 export const assets = {
   logo,
-  cybertwinplus,
+
   photoeffect1,
   support,
   shaking,

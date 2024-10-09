@@ -4,13 +4,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 3rem 6rem;
+  padding: 3rem 8rem;
   max-width: 100%;
 }
 .logo {
   width: 15rem;
   position: relative;
   top: -1rem;
+  cursor: pointer;
 }
 .navbar-text {
   display: flex;
@@ -110,6 +111,9 @@
 }
 /* Media queries */
 @media (max-width: 720px) {
+  .navbar {
+    padding: 3rem 4rem;
+  }
   .logo {
     width: 12rem;
   }
@@ -167,5 +171,15 @@
   }
   .back-icon {
     font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 3rem 3rem;
+  }
+  .logo {
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
   }
 }
