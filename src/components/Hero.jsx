@@ -2,7 +2,7 @@ import "./../Styles/hero.css";
 import cybertwin from "./../assets/cybertwinsx.png";
 const Hero = () => {
   return (
-    <>
+    <div className="total-hero">
       <div className="hero">
         <div className="hero-text">
           <h3>
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero img">
         <img src={cybertwin} alt="" />
       </div>
-    </>
+    </div>
   );
 };
 

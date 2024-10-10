@@ -1,12 +1,17 @@
-.hero {
+.total-hero {
+  height: 60rem;
+  flex-shrink: 1;
   padding: 0 8rem;
+  /* margin: 0 auto; */
+}
+.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: calc(100vh - 6rem);
   width: 100vw;
   max-width: 75rem;
-  /* margin: 0 auto; */
+
   overflow: hidden;
 }
 .hero-text {
@@ -51,12 +56,20 @@
   border: 2px solid #fff;
   cursor: pointer;
 }
+.hero {
+  overflow: hidden;
+  padding: 0;
+}
 .hero img {
   width: 80rem;
+  height: auto;
+  display: block;
   position: absolute;
   top: 9rem;
   right: 0;
   z-index: -1;
+  padding: 0;
+  margin: 0;
   object-fit: cover;
 }
 @media (max-width: 850px) {

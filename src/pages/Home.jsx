@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import NewArrival from "../components/NewArrival";
+import NewArrival from "./../components/NewArrival";
 
 const Home = () => {
   return (

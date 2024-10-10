@@ -1,0 +1,15 @@
+.newarrival {
+  z-index: 1000;
+}
+.title {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.title-text {
+  font-family: "Abril Fatface", serif;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}

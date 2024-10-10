@@ -10,6 +10,7 @@ const ShopContextProvider = (props) => {
     delivery_fee,
   };
   return (
+    // eslint-disable-next-line react/prop-types
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
   );
 };
