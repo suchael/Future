@@ -54,7 +54,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ab",
@@ -67,7 +67,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ac",
@@ -80,7 +80,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ad",
@@ -93,7 +93,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ae",
@@ -106,7 +106,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "af",
@@ -118,7 +118,7 @@ export const products = [
     subcategory: "laptop",
     features: ["8GB Ram, corei5, screentouch, 252gig, backlit etc"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ag",
@@ -143,7 +143,7 @@ export const products = [
     subcategory: "others",
     features: [" touchscreen,bluetooth"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ai",
@@ -168,7 +168,7 @@ export const products = [
     subcategory: "Headphones",
     features: [" Basslit"],
     data: 121212,
-    bestseller: true,
+    bestseller: false,
   },
   {
     _id: "ak",

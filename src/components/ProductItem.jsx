@@ -7,25 +7,27 @@ import "./../Styles/Newarrival.css";
 const ProductItem = ({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
   return (
-    <Link
-      to={`/products/${id}`}
-      style={{ color: "#fff", cursor: "pointer" }}
-      className="link-product"
-    >
-      <div className="Total-link-product-sub">
-        <div className="link-product-sub">
-          <img src={image[0]} alt="" className="link-image" />
+    <>
+      <Link
+        to={`/products/${id}`}
+        style={{ color: "#fff", cursor: "pointer" }}
+        className="link-product"
+      >
+        <div className="Total-link-product-sub">
+          <div className="link-product-sub">
+            <img src={image[0]} alt="" className="link-image" />
+          </div>
+
+          <p className="item-details">
+            <p>{name}</p>
+            {currency}
+
+            {price}
+            <button>Buy</button>
+          </p>
         </div>
-
-        <p className="item-details">
-          <p>{name}</p>
-          {currency}
-
-          {price}
-          <button>Buy</button>
-        </p>
-      </div>
-    </Link>
+      </Link>
+    </>
   );
 };
 

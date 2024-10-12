@@ -144,6 +144,10 @@
     transition: 0.5s;
     border-bottom: 1px solid grey;
   }
+  .menu-links.active {
+    background-color: #460364;
+    color: #fff;
+  }
   .menu-links:hover {
     font-size: 1.5rem;
     font-weight: 500;
@@ -153,6 +157,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+
     width: 30rem;
   }
 

@@ -18,7 +18,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <img src={assets.logo} alt="Logo" className="logo" />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <img src={assets.logo} alt="Logo" className="logo" />
+        </Link>
 
         <ul className="navbar-text">
           <NavLink to="/" className="link">
