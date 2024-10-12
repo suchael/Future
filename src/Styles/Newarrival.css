@@ -4,12 +4,140 @@
 .title {
   z-index: 100;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 .title-text {
-  font-family: "Abril Fatface", serif;
-  font-size: 3rem;
   color: #fff;
-  letter-spacing: 0.2rem;
+  font-family: "Abril Fatface";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.title-text span {
+  color: #d1cece;
+}
+.title-text-sub {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.render-product {
+  display: grid;
+  grid-template-columns: repeat(4fr, 4fr);
+  gap: 2rem;
+}
+.link-product {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.link-product-sub {
+  overflow: hidden;
+}
+.link-image:hover {
+  transition: ease-in-out;
+}
+
+/* for productitem display */
+.render-product {
+  padding: 2rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+.link-image {
+  width: 184px;
+  object-fit: contain;
+  height: 192px;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+/* Set the container dimensions */
+.link-product-sub {
+  width: 184px;
+  overflow: hidden;
+  display: flex;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.Total-link-product-sub .item-details {
+  background-color: rgba(246, 237, 237, 0.16);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.Total-link-product-sub button {
+  font-family: "Abril Fatface";
+  font-size: 1.5rem;
+
+  font-weight: 100;
+  line-height: normal;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 40px;
+  background: #4b0055;
+  color: #fff;
+
+  border: none;
+
+  cursor: pointer;
+}
+.Total-link-product-sub button:hover {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #4b0055;
+}
+.Total-link-product-sub p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .render-product {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Adjust to 4 columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .render-product {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust to 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .render-product {
+    grid-template-columns: 1fr; /* Stack items vertically on mobile */
+  }
+  .title-text {
+    font-size: 2rem;
+  }
+  .title-text-sub {
+    font-size: 1rem;
+  }
 }

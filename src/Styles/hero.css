@@ -103,8 +103,12 @@
   }
 }
 @media (max-width: 500px) {
+  .total-hero {
+    height: 40vh;
+  }
   .hero {
     padding: 0;
+    height: 20vh;
   }
   .hero-text {
     padding: 1rem;
