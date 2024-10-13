@@ -111,7 +111,6 @@ html {
   flex-direction: column;
   padding: 2rem 4rem;
   gap: 2rem;
-  z-index: 1000;
 }
 
 .chooseus-text h3 {
@@ -232,5 +231,22 @@ html {
   }
   .title-text-sub {
     font-size: 1.5rem;
+  }
+  .choose-left img {
+    width: 20rem;
+  }
+  .total-choose-us {
+    padding: 2rem 4rem;
+    align-items: center;
+    text-align: center;
+  }
+  .chooseus-text {
+    gap: 0.6rem;
+  }
+  .chooseus-text h3 {
+    font-size: 2rem;
+  }
+  .chooseus-text p {
+    font-size: 1.25rem;
   }
 }
