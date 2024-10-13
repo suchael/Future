@@ -14,7 +14,48 @@
 
   overflow: hidden;
 }
-
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  z-index: 1000;
+}
+.hero-text h3 {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+.hero-text p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.hero-text button {
+  width: 10rem;
+  border: none;
+  border-radius: 40px;
+  background: #fff;
+  color: #4b0055;
+  font-family: "Abril Fatface";
+  padding: 1rem;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.hero-text button:hover {
+  background: #4b0055;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
 .hero {
   overflow: hidden;
   padding: 0;
