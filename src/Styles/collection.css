@@ -1,0 +1,87 @@
+.collection {
+  display: flex;
+  padding: 2rem 8rem;
+}
+.filter {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter-box {
+  transition: opacity 0.3s ease;
+}
+
+.filter-box.hidden {
+  display: block;
+  opacity: 1;
+}
+.categories {
+  color: #4b0055;
+  font-family: "Abril Fatface";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  margin: 1rem;
+}
+.categories-sub {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.categories-sub-sub {
+  display: flex;
+  gap: 0.5rem;
+}
+.checkbox-text {
+  color: #4b0055;
+  font-family: "Abril Fatface";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Types {
+  margin-top: 3rem;
+}
+.filter-img {
+  font-size: 2.5rem;
+  display: none;
+  cursor: pointer;
+}
+.Sorting-div {
+  background-color: #fff;
+  padding: 1rem;
+}
+label,
+select {
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Montserrat", "sans-serif";
+  background-color: none;
+  border: none;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+.right-collection {
+  display: flex;
+  flex: 1;
+  margin: 0rem 2rem;
+  gap: 60rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .filter-box.hidden {
+    display: none;
+  }
+  .filter-img {
+    display: block;
+  }
+}

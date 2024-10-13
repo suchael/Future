@@ -1,6 +1,7 @@
 import Title from "./Title";
 import chooseus from "./../assets/heroimg2.png";
 import "./../Styles/hero.css";
+import { Link } from "react-router-dom";
 
 const ChooseUs = () => {
   return (
@@ -15,7 +16,9 @@ const ChooseUs = () => {
         <div className="chooseus-text">
           <h3>Let’s be your gadget plug.</h3>
           <p>What are you looking for let’s go to collection</p>
-          <button>Shop Now</button>
+          <Link to="/collection">
+            <button>Shop Now</button>
+          </Link>
         </div>
       </div>
     </>
