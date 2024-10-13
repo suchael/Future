@@ -226,3 +226,11 @@ html {
     gap: 3rem;
   }
 }
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 2rem;
+  }
+  .title-text-sub {
+    font-size: 1.5rem;
+  }
+}

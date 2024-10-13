@@ -25,7 +25,7 @@
   padding: 2rem 8rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, auto);
+
   gap: 1rem;
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
@@ -111,7 +111,16 @@
 
 @media (max-width: 480px) {
   .render-product {
-    grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    padding: 2rem 4rem;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .link-image {
+    width: 15rem;
+    padding: 2rem;
+  }
+  .link-product-sub {
+    width: 15rem;
   }
   .title-text {
     font-size: 2rem;
