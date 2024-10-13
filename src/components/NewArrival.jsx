@@ -18,6 +18,7 @@ const NewArrival = () => {
     <div className="newarrival">
       <div className="newarrival-sub">
         <Title text1="LATEST" text2="ARRIVAL" />
+        <p className="title-text-sub">Introducing our latest products</p>
       </div>
       {/* Display new arrival products */}
       <div className="render-product">

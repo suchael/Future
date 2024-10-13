@@ -23,3 +23,206 @@ body {
 html {
   font-size: 10px;
 }
+.title {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-text {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.title-text span {
+  color: #d1cece;
+}
+.title-text-sub {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+/* for policy section */
+.total-policy {
+  display: grid;
+  grid-template-columns: repeat(2fr, 2fr);
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 4rem 8rem;
+  align-content: center;
+
+  border-radius: 35px;
+}
+.policy {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 50rem;
+  /* align-items: center; */
+  text-align: center;
+}
+.policy img,
+.total-policy img {
+  width: 10rem;
+}
+.policy h2,
+.total-policy h2 {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.policy p,
+.total-policy p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+/* for choose us section */
+.choose-us {
+  margin-top: 5rem;
+}
+.total-choose-us {
+  padding: 2rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+}
+.hero-text,
+.chooseus-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  z-index: 1000;
+}
+.hero-text h3,
+.chooseus-text h3 {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+.hero-text p,
+.chooseus-text p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.hero-text button,
+.chooseus-text button {
+  width: 10rem;
+  border: none;
+  border-radius: 40px;
+  background: #fff;
+  color: #4b0055;
+  font-family: "Abril Fatface";
+  padding: 1rem;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.hero-text button:hover,
+.chooseus-text button:hover {
+  background: #4b0055;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* for footer1 styling */
+.footer1 {
+  display: flex;
+  padding: 2rem 8rem;
+  justify-content: space-between;
+}
+.footer1 p {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  max-width: 50rem;
+}
+.footer1 h3 {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.footer1 li {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  list-style-type: none;
+}
+.footer2 {
+  padding: 1rem 8rem;
+  text-align: center;
+}
+.footer2 small {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+@media (max-width: 900px) {
+  .title-text {
+    font-size: 2rem;
+  }
+  .choose-left img {
+    width: 30rem;
+  }
+  .chooseus-text h3 {
+    font-size: 3rem;
+  }
+  .chooseus-text p {
+    font-size: 1.5rem;
+  }
+  .policy {
+    display: grid;
+    gap: 10rem;
+  }
+  .total-policy img {
+    width: 6rem;
+  }
+  .policy {
+    gap: 2rem;
+  }
+  .footer1 {
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    gap: 3rem;
+  }
+}

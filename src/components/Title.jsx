@@ -6,7 +6,6 @@ const Title = ({ text1, text2 }) => {
       <p className="title-text">
         {text1} <span>{text2}</span>
       </p>
-      <p className="title-text-sub">Introducing our latest products</p>
     </div>
   );
 };

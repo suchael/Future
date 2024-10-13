@@ -2,7 +2,6 @@
 import logo from "./logo.png";
 // for  img effect
 
-import photoeffect1 from "./photoeffect1.png";
 // gadgets
 import iphone1 from "./iphone1.png";
 import iphone3 from "./iphone3.png";
@@ -24,7 +23,6 @@ import ticktick from "./ticktick.png";
 export const assets = {
   logo,
 
-  photoeffect1,
   support,
   shaking,
   ticktick,
@@ -54,7 +52,7 @@ export const products = [
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],
     data: 121212,
-    bestseller: false,
+    bestseller: true,
   },
   {
     _id: "ab",
