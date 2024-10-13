@@ -233,10 +233,10 @@ html {
     font-size: 1.5rem;
   }
   .choose-left img {
-    width: 20rem;
+    width: 25rem;
   }
   .total-choose-us {
-    padding: 2rem 4rem;
+    padding: 2rem;
     align-items: center;
     text-align: center;
   }
@@ -244,9 +244,33 @@ html {
     gap: 0.6rem;
   }
   .chooseus-text h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .chooseus-text p {
     font-size: 1.25rem;
+  }
+
+  .chooseus-text button {
+    width: 8rem;
+    font-size: 1.2rem;
+  }
+  .total-policy {
+    padding: 2rem 4rem;
+  }
+  .total-policy h2 {
+    font-size: 1.5rem;
+  }
+  .total-policy p {
+    font-size: 0.8rem;
+  }
+  .footer1 {
+    padding: 2rem 4rem;
+    gap: 1rem;
+  }
+  .footer1 h3 {
+    font-size: 1.5rem;
+  }
+  .footer1 li {
+    font-size: 1rem;
   }
 }
