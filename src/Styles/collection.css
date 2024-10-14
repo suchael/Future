@@ -69,7 +69,11 @@ select {
   text-decoration: none;
   text-decoration-line: none;
 }
+
 .right-collection {
+  gap: 0;
+  display: flex;
+  justify-content: space-between;
   padding: 2rem 8rem;
 }
 .total-right-collection {
@@ -97,10 +101,12 @@ select {
   .collection-products {
     display: grid;
     gap: 2rem;
+    padding: 2rem 4rem;
     grid-template-columns: repeat(2, 1fr);
   }
   .right-collection {
     gap: 0;
+    display: flex;
     justify-content: space-between;
   }
 }
