@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Collection from "./pages/Collection";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
@@ -9,17 +9,17 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Order from "./pages/Order";
 import Navbar from "./components/Navbar";
-import OurPolicy from "./components/OurPolicy";
-import Footer1 from "./components/Footer1";
-import Footer2 from "./components/Footer2";
+import Tcollection from "./pages/Tcollection";
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/collection" element={<Tcollection />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:productId" element={<Product />} />
@@ -28,9 +28,6 @@ const App = () => {
         <Route path="/Placeorder" element={<Placeorder />} />
         <Route path="/Order" element={<Order />} />
       </Routes>
-      <OurPolicy />
-      <Footer1 />
-      <Footer2 />
     </div>
   );
 };

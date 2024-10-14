@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext.jsx";
 import "./../Styles/collection.css";
 import { RxDropdownMenu } from "react-icons/rx";
-import ProductItem from "../components/ProductItem.jsx";
+import ProductItem from "./ProductItem.jsx";
 
 const Collection = () => {
   const { products } = useContext(ShopContext);
