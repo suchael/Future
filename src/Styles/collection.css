@@ -71,9 +71,18 @@ select {
 }
 .right-collection {
   display: flex;
-  flex: 1;
+
   margin: 0rem 2rem;
-  gap: 60rem;
+}
+.total-right-collection {
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.collection-products {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 4fr);
 }
 
 /* Media query for smaller screens */
@@ -83,5 +92,20 @@ select {
   }
   .filter-img {
     display: block;
+  }
+  .collection {
+    justify-content: center;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .collection-products {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .right-collection {
+    gap: 0;
+    justify-content: space-between;
   }
 }

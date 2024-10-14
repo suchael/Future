@@ -1,11 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext.jsx";
 import "./../Styles/collection.css";
 import { RxDropdownMenu } from "react-icons/rx";
+import ProductItem from "../components/ProductItem.jsx";
 
 const Collection = () => {
   const { products } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
+  const [filterProduct, setFilterProduct] = useState([]);
+  useEffect(() => {
+    setFilterProduct(products);
+  }, []);
 
   return (
     <div className="collection">
@@ -26,6 +31,7 @@ const Collection = () => {
             backgroundColor: "#fff",
             cursor: "pointer",
             borderRadius: "10px",
+            zIndex: "9999",
 
             // opacity: showFilter ? "1" : "0",
           }}
@@ -117,8 +123,18 @@ const Collection = () => {
             </select>
           </div>
         </div>
+        <div className="render-product collection-products">
+          {filterProduct.map((item, index) => (
+            <ProductItem
+              key={index}
+              name={item.name}
+              id={item._id}
+              price={item.price}
+              image={item.image}
+            />
+          ))}
+        </div>
       </div>
-      {/* Maping the product */}
     </div>
   );
 };
