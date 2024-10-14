@@ -4,8 +4,9 @@ import "../Styles/navbar.css";
 import { MdKeyboardArrowLeft, MdOutlinePersonOutline } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [active, setActive] = useState(null); // Tracks the active element
@@ -14,7 +15,7 @@ const Navbar = () => {
   const handleClick = (id) => {
     setActive(id); // Set the clicked item as active
   };
-
+  const { setShowSearch } = useContext(ShopContext);
   return (
     <>
       <div className="navbar">
@@ -66,7 +67,7 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-icon">
-          <CiSearch />
+          <CiSearch onClick={() => setShowSearch(true)} />
 
           {/* Profile Icon with Dropdown */}
           <div className="dropdown">
