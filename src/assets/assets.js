@@ -60,7 +60,7 @@ export const products = [
     description:
       "Introducing iPhone 11 Pro Max. With a 6.5-inch Super Retina XDR OLED display, it offers an unprecedented level of visual quality. The device's 5G chip and Neural Engine enable seamless 4K video calls and advanced image and video features.",
     price: 2299.99,
-    image: [iphone3],
+    image: [iphone3, iphone4],
     category: "Communication devices",
     subcategory: "phones",
     features: ["5G", "Super Retina XDR OLED", "4K Video", "Neural Engine"],

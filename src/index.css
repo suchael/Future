@@ -9,15 +9,18 @@ font-family: "Abril Fatface", serif; */
 }
 
 body {
-  background-image: url("./assets/background.png"); /* Set the background image */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repetition of the image */
-  background-attachment: fixed; /* Fix the background so it doesn't scroll */
-  height: 100%; /* Let the body take the full height of the viewport */
-  width: 100%; /* Full width */
-  overflow-x: hidden; /* Disable horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
