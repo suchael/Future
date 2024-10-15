@@ -8,6 +8,8 @@ import { CiStar } from "react-icons/ci";
 import OurPolicy from "../components/OurPolicy";
 import Footer1 from "../components/Footer1";
 import Footer2 from "../components/Footer2";
+import RelatedProduct from "../components/Relatedproduct";
+import Title from "../components/Title";
 
 const Product = () => {
   const { productId } = useParams();
@@ -86,9 +88,14 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <OurPolicy />
-      <Footer1 />
-      <Footer2 />
+      <div style={{ marginTop: "5rem" }}>
+        <Title text1={"Related"} text2={"Projects"} />
+        {/* Related product section */}
+        <RelatedProduct />
+        <OurPolicy />
+        <Footer1 />
+        <Footer2 />
+      </div>
     </>
   ) : (
     <div style={{ opacity: "0" }}></div>
