@@ -137,7 +137,7 @@ export const products = [
       "This is an awesome watch for fitness and easy tracking pf activities",
     price: 5500.0,
     image: [smartwatch1],
-    category: "others",
+    category: "Others",
     subcategory: "others",
     features: [" touchscreen,bluetooth"],
     data: 121212,

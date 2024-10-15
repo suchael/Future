@@ -148,6 +148,16 @@ input {
   color: #4b0055;
   cursor: pointer;
 }
+.not-found {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.loader {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  color: #fff;
+}
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .filter-box.hidden {
