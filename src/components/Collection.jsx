@@ -100,6 +100,7 @@ const Collection = () => {
                 <div className="categories-sub-sub">
                   <p>
                     <input
+                      className="collection-input"
                       type="checkbox"
                       value="Communication devices"
                       onChange={toggleCategory}

@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
 import { products } from "../assets/assets";
 import PropTypes from "prop-types";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,29 +14,47 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
   // Add to cart function
-  const addToCart = async (itemId) => {
+  const addToCart = (itemId) => {
     if (!itemId) {
       toast.error("No item selected");
-      return;
+      return; // Ensure to exit the function if no item is selected
     }
+
     let cartData = structuredClone(cartItems); // Make a copy of cart items
 
-    if (cartData[itemId]) {
-      cartData[itemId] += 1; // If item already exists in the cart, increment quantity
-    } else {
-      cartData[itemId] = 1; // Otherwise, initialize with 1
-    }
+    // Increment quantity or initialize
+    cartData[itemId] = (cartData[itemId] || 0) + 1;
 
     setCartItems(cartData); // Update the cart state
+    toast.success("Item added to cart!"); // Notify user of success
   };
 
   // Get total number of items in cart
   const getCartCount = () => {
-    let totalCount = 0;
-    for (const itemId in cartItems) {
-      totalCount += cartItems[itemId]; // Sum up quantities of all items
+    return Object.values(cartItems).reduce(
+      (totalCount, quantity) => totalCount + quantity,
+      0
+    );
+  };
+
+  // Update item quantity or remove it if less than 1
+  const updateQuantity = (itemId, quantity) => {
+    let cartData = structuredClone(cartItems);
+    if (quantity < 1) {
+      delete cartData[itemId]; // Remove item if quantity is less than 1
+    } else {
+      cartData[itemId] = quantity; // Update quantity
     }
-    return totalCount;
+    setCartItems(cartData);
+  };
+
+  // Calculate total cart amount
+  const getCartAmount = () => {
+    return Object.keys(cartItems).reduce((totalAmount, itemId) => {
+      const itemInfo = products.find((product) => product._id === itemId);
+      const quantity = cartItems[itemId];
+      return totalAmount + (itemInfo ? itemInfo.price * quantity : 0);
+    }, 0);
   };
 
   const value = {
@@ -51,6 +68,8 @@ const ShopContextProvider = (props) => {
     cartItems,
     addToCart,
     getCartCount,
+    updateQuantity,
+    getCartAmount,
   };
 
   return (

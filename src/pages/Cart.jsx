@@ -3,8 +3,12 @@ import { ShopContext } from "../context/ShopContext";
 import "./../Styles/cart.css";
 import Title from "./../components/Title";
 
+import CartTotal from "../components/CartTotal";
+import { GrTrash } from "react-icons/gr";
+
 const Cart = () => {
-  const { products, currency, cartItems } = useContext(ShopContext);
+  const { products, currency, cartItems, updateQuantity } =
+    useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
@@ -26,7 +30,7 @@ const Cart = () => {
         </div>
         <div>
           {cartData.length === 0 ? (
-            <p className="Not-found">Your cart is empty</p>
+            <p className="not-found">Your cart is empty....</p>
           ) : (
             cartData.map((item, index) => {
               const product = products.find((p) => p._id === item._id);
@@ -42,11 +46,36 @@ const Cart = () => {
                       {product.price * item.quantity}
                     </p>
                   </div>
-                  <input type="number" min={1} defaultValue={item.quantity} />
+                  <input
+                    onChange={(e) =>
+                      e.target.value === " " || e.target.value === "0"
+                        ? null
+                        : updateQuantity(item._id, Number(e.target.value))
+                    }
+                    type="number"
+                    min={1}
+                    defaultValue={item.quantity}
+                    className="qauntity-input"
+                  />
+                  <GrTrash
+                    onClick={() => updateQuantity(item._id, 0)}
+                    className="trash-bin"
+                  />
                 </div>
               );
             })
           )}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            margin: "2rem",
+          }}
+        >
+          <div className="Cart-total-render">
+            <CartTotal />
+          </div>
         </div>
       </div>
     </>
