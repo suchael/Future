@@ -4,31 +4,31 @@ import { ShopContext } from "../context/ShopContext";
 import "./../Styles/relatedproduct.css";
 import ProductItem from "./ProductItem";
 
-const RelatedProduct = ({ Category, subCategory }) => {
+const RelatedProduct = ({ Category }) => {
   const { products } = useContext(ShopContext);
   const [related, setRelated] = useState([]);
 
   useEffect(() => {
     if (products.length > 0) {
-      // Filter products by Category and subCategory
+      // Filter products by Category
       const filteredProducts = products
         .filter((item) => item.Category === Category)
-        .slice(0, 5); // Limit to 5 products
+        .slice(0 > 5); // Limit to 5 products
 
       setRelated(filteredProducts); // Update the state with the filtered products
     }
-  }, [products, Category, subCategory]); // Run effect when products, Category, or subCategory changes
+  }, [products, Category]); // Run effect when products, Category, or subCategory changes
 
   return (
     <div className="render-product">
       {related.length > 0 ? (
-        related.map((product) => (
+        related.map((item, index) => (
           <ProductItem
-            key={product._id}
-            name={product.name}
-            id={product._id}
-            price={product.price}
-            image={product.image}
+            key={index}
+            name={item.name}
+            id={item._id}
+            price={item.price}
+            image={item.image}
           />
         ))
       ) : (
@@ -38,10 +38,9 @@ const RelatedProduct = ({ Category, subCategory }) => {
   );
 };
 
-// Prop validation for Category and subCategory
 RelatedProduct.propTypes = {
   Category: PropTypes.string.isRequired, // Category must be a string and is required
-  subCategory: PropTypes.string.isRequired, // subCategory must be a string and is required
+  subCategory: PropTypes.string, // subCategory is not required anymore
 };
 
 export default RelatedProduct;

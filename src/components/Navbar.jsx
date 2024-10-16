@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleClick = (id) => {
     setActive(id); // Set the clicked item as active
   };
-  const { setShowSearch } = useContext(ShopContext);
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
   return (
     <>
       <div className="navbar">
@@ -83,7 +83,7 @@ const Navbar = () => {
 
           <Link to="./cart" className="link-to-cart">
             <TiShoppingCart />
-            <p className="cart-count">10</p>
+            <p className="cart-count">{getCartCount()}</p>
           </Link>
 
           {/* Mobile menu icon */}

@@ -18,13 +18,13 @@ const ProductItem = ({ id, image, name, price }) => {
             <img src={image[0]} alt="" className="link-image" />
           </div>
 
-          <p className="item-details">
+          <div className="item-details">
             <p>{name}</p>
             {currency}
 
             {price}
             <button>Buy</button>
-          </p>
+          </div>
         </div>
       </Link>
     </>

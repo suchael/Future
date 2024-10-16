@@ -11,10 +11,13 @@ import Order from "./pages/Order";
 import Navbar from "./components/Navbar";
 import Tcollection from "./pages/Tcollection";
 import SearchBar from "./components/SearchBar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <div>
+      <ToastContainer />
       <Navbar />
       <SearchBar />
       <Routes>

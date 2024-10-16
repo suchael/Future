@@ -13,7 +13,7 @@ import Title from "../components/Title";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState("");
 
@@ -83,7 +83,9 @@ const Product = () => {
                 <span>Descriptions:</span>
                 {productData.description}
               </p>
-              <button>ADD TO CART</button>
+              <button onClick={() => addToCart(productData._id)}>
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>
@@ -91,7 +93,11 @@ const Product = () => {
       <div style={{ marginTop: "5rem" }}>
         <Title text1={"Related"} text2={"Projects"} />
         {/* Related product section */}
-        <RelatedProduct />
+        <RelatedProduct
+          Category={productData.Category}
+          subCategory={productData.subCategory || "defaultSubCategory"}
+        />
+
         <OurPolicy />
         <Footer1 />
         <Footer2 />
