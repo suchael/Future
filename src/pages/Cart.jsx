@@ -7,7 +7,7 @@ import CartTotal from "../components/CartTotal";
 import { GrTrash } from "react-icons/gr";
 
 const Cart = () => {
-  const { products, currency, cartItems, updateQuantity } =
+  const { products, currency, cartItems, updateQuantity, navigate } =
     useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
@@ -38,29 +38,34 @@ const Cart = () => {
 
               return (
                 <div key={index} className="cart-item">
-                  <img src={product.image[0]} alt="product-name" />
-                  <div className="cart-image-details">
-                    <h1>{product.name}</h1>
-                    <p>
-                      {currency}
-                      {product.price * item.quantity}
-                    </p>
+                  <div className="cart-item-prod-detail">
+                    <img src={product.image[0]} alt="product-name" />
+                    <div className="cart-image-details">
+                      <h1>{product.name}</h1>
+                      <h3>
+                        {currency}
+                        {product.price}
+                      </h3>
+                      <p>{product.quantity}</p>
+                    </div>
                   </div>
-                  <input
-                    onChange={(e) =>
-                      e.target.value === " " || e.target.value === "0"
-                        ? null
-                        : updateQuantity(item._id, Number(e.target.value))
-                    }
-                    type="number"
-                    min={1}
-                    defaultValue={item.quantity}
-                    className="qauntity-input"
-                  />
-                  <GrTrash
-                    onClick={() => updateQuantity(item._id, 0)}
-                    className="trash-bin"
-                  />
+                  <div className="cart-input-trash">
+                    <input
+                      onChange={(e) =>
+                        e.target.value === " " || e.target.value === "0"
+                          ? null
+                          : updateQuantity(item._id, Number(e.target.value))
+                      }
+                      type="number"
+                      min={1}
+                      defaultValue={item.quantity}
+                      className="qauntity-input"
+                    />
+                    <GrTrash
+                      onClick={() => updateQuantity(item._id, 0)}
+                      className="trash-bin"
+                    />
+                  </div>
                 </div>
               );
             })
@@ -71,10 +76,22 @@ const Cart = () => {
             display: "flex",
             justifyContent: "flex-end",
             margin: "2rem",
+            gap: "2rem",
+            // flexDirection: "column",
           }}
         >
           <div className="Cart-total-render">
-            <CartTotal />
+            <div>
+              <CartTotal />
+            </div>
+            <div className="checkout-btn-container">
+              <button
+                className="checkout-btn"
+                onClick={() => navigate("/place-order")}
+              >
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
           </div>
         </div>
       </div>

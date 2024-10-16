@@ -72,6 +72,12 @@
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+.cart-image-details h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
 .cart-total-details p {
   color: green;
   font-size: 1.5rem;
@@ -99,11 +105,53 @@
   font-size: 2.5rem;
   cursor: pointer;
 }
+.checkout-btn {
+  width: 20rem;
+  padding: 1rem;
+  color: #fff;
+  background-color: #4b0055;
+  border: 1px solid #fff;
+  font-family: "Abril Fatface", serif;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+}
+.checkout-btn:hover {
+  transform: scale(1.05);
+}
+.checkout-btn:active {
+  opacity: 0.6;
+}
+.cart-total-details h1 {
+  color: #4b0055;
+}
+.cart-item-prod-detail {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.cart-input-trash {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.checkout-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.Cart-total-render {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 @media (max-width: 768px) {
   .cart-item {
     gap: 1rem;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .cart-display {
     padding: 2rem 6rem;
@@ -142,6 +190,12 @@
   }
   .cart-total-details p {
     font-size: 1.2rem;
+  }
+  .cart-total-details b {
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
   }
   .trash-bin {
     font-size: 2rem;

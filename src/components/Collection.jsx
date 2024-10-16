@@ -184,7 +184,16 @@ const Collection = () => {
                   />
                 ))
               ) : (
-                <p className="not-found">Ooops no products found.....</p>
+                <p
+                  style={{
+                    color: "#fff",
+                    fontSize: "1.2rem",
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: "100",
+                  }}
+                >
+                  Ooops no products found.....
+                </p>
               )}
             </div>
           </div>
