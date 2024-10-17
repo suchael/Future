@@ -42,13 +42,111 @@
 .payment-method {
   display: flex;
   gap: 3rem;
+  margin-top: 2rem;
   flex-direction: column;
+}
+.total-transfer-cont {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  flex-direction: row;
+}
+label {
+  color: #fff;
+}
+.label-payment {
+  color: #4b0055;
+}
+.transfer-div {
+  display: flex;
+
+  background-color: #fff;
+  padding: 1rem;
+  width: 20rem;
+}
+.transfer-div input {
+  margin: 0 0.5rem;
+}
+.transfer-div img {
+  width: 3rem;
+}
+.label-payment .paypal-logo {
+  width: 6rem;
+}
+
+.bank-transfer-info p,
+.paypal-info,
+.cash-on-delivery-info {
+  line-height: 2rem;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+/* .total-upload-transfer-proof {
+  padding: 1rem 2rem;
+} */
+.paypal-button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.cart-inside-placeorder {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+.total-upload-transfer-proof {
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #4b0055;
+  background-color: #fff;
+}
+.total-upload-transfer-proof p {
+  color: #4b0055;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.label-proof {
+  color: #4b0055;
+  margin-right: 1rem;
+}
+.upload-success-cont p {
+  margin-top: 1rem;
+  color: green;
+}
+.placeorder-btn {
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .place-order {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem 10rem;
+  }
+  .total-transfer-cont {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cart-inside-placeorder {
+    display: flex;
+    justify-content: center;
+  }
+  .cash-on-delivery-info,
+  .place-order-div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 6rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .placeorder-btn {
+    margin-top: 0;
   }
 }
 @media (max-width: 500px) {
@@ -66,5 +164,9 @@
   }
   .input-info {
     width: 100%;
+  }
+  .cart-inside-placeorder {
+    display: flex;
+    justify-content: center;
   }
 }

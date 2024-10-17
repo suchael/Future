@@ -2,9 +2,9 @@ import { useEffect, useState, useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import "./../Styles/cart.css";
 import Title from "./../components/Title";
-
 import CartTotal from "../components/CartTotal";
 import { GrTrash } from "react-icons/gr";
+import { toast } from "react-toastify"; // Import Toastify
 
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity, navigate } =
@@ -21,6 +21,17 @@ const Cart = () => {
     });
     setCartData(tempData);
   }, [cartItems]);
+
+  const handleCheckout = () => {
+    // Check if the cart is empty
+    if (cartData.length === 0) {
+      toast.error(
+        "Your cart is empty. Please add items before proceeding to checkout."
+      );
+      return; // Cancel the request to proceed to checkout
+    }
+    navigate("/place-order"); // Proceed to checkout if cart is not empty
+  };
 
   return (
     <>
@@ -77,7 +88,6 @@ const Cart = () => {
             justifyContent: "flex-end",
             margin: "2rem",
             gap: "2rem",
-            // flexDirection: "column",
           }}
         >
           <div className="Cart-total-render">
@@ -87,7 +97,7 @@ const Cart = () => {
             <div className="checkout-btn-container">
               <button
                 className="checkout-btn"
-                onClick={() => navigate("/place-order")}
+                onClick={handleCheckout} // Use the new handler
               >
                 PROCEED TO CHECKOUT
               </button>
