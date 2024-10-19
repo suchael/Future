@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import "./../Styles/hero.css";
 import cybertwin from "./../assets/cybertwinsx.png";
+
 const Hero = () => {
   return (
     <div className="total-hero">
@@ -14,7 +16,9 @@ const Hero = () => {
             Giving you the best there is your choice our decision let’s be your
             plug.
           </p>
-          <button>Shop Now</button>
+          <Link to="/collection">
+            <button>Shop Now</button>
+          </Link>
         </div>
       </div>
       <div className="hero img">

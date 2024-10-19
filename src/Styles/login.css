@@ -1,0 +1,100 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  gap: 1rem;
+  color: #fff;
+  margin: 2rem 8rem;
+  padding: 2rem 8rem;
+
+  box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.1);
+}
+.sub-login-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 10rem;
+}
+.sub-login-form p {
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: "Abril Fatface", serif;
+}
+.fillin-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.fillin-details input {
+  width: 50rem;
+  padding: 1rem 2rem;
+  border: none;
+}
+.fillin-details ::placeholder {
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.form-actions button {
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #4b0055;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+.toggle-link {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.toggle-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 650px) {
+  .login-form {
+    padding: 2rem 4rem;
+    margin: 2rem 4rem;
+    gap: 2rem;
+  }
+  .fillin-details input {
+    width: 40rem;
+    padding: 0.8rem;
+  }
+  .form-actions button {
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .login-form {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .fillin-details input {
+    width: 30rem;
+  }
+  .form-actions button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 380px) {
+  .login-form {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .fillin-details input {
+    width: 25rem;
+  }
+  .form-actions button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}

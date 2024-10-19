@@ -71,7 +71,10 @@ const Navbar = () => {
 
           {/* Profile Icon with Dropdown */}
           <div className="dropdown">
-            <MdOutlinePersonOutline className="profile-icon" />
+            <Link to="/Login">
+              <MdOutlinePersonOutline className="profile-icon" />
+            </Link>
+
             <div className="dropdown-content">
               <ul>
                 <li>My Profile</li>
