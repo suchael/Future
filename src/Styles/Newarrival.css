@@ -89,10 +89,12 @@
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
-
   font-weight: 400;
 }
-
+.Total-link-product-sub p span {
+  font-size: 1.3rem;
+  line-height: 2;
+}
 @media (max-width: 1200px) {
   .render-product {
     grid-template-columns: repeat(

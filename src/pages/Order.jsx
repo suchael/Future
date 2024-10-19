@@ -4,7 +4,7 @@ import Title from "./../components/Title";
 import "./../Styles/order.css";
 
 const Order = () => {
-  const { products, currency, cartItems } = useContext(ShopContext); // get cartItems from context
+  const { products, formatPrice, cartItems } = useContext(ShopContext); // get cartItems from context
   const [currentTime, setCurrentTime] = useState("");
 
   // Get the current time when the component is mounted
@@ -43,7 +43,7 @@ const Order = () => {
                   </div>
                   <div className="order-details">
                     <p>{item.name}</p>
-                    <p>{`${currency}${item.price}`}</p>
+                    <p>{formatPrice(item.price)}</p>
                     <p>Quantity: {quantity}</p> {/* Displaying quantity */}
                     <p>
                       Date: <span>{currentTime}</span>{" "}

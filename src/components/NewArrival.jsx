@@ -6,13 +6,13 @@ import ProductItem from "./../components/ProductItem";
 
 const NewArrival = () => {
   const { products } = useContext(ShopContext);
-  const [newArrival, setNewArrival] = useState([]); // Fixing useState usage
+  const [newArrival, setNewArrival] = useState([]);
 
   useEffect(() => {
     if (products) {
       setNewArrival(products.slice(0, 10));
     }
-  }, [products]); // Ensure products is a dependency
+  }, [products]);
 
   return (
     <div className="newarrival">

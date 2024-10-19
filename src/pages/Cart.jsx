@@ -7,8 +7,8 @@ import { GrTrash } from "react-icons/gr";
 import { toast } from "react-toastify"; // Import Toastify
 
 const Cart = () => {
-  const { products, currency, cartItems, updateQuantity, navigate } =
-    useContext(ShopContext);
+  const { products, cartItems, updateQuantity, navigate, formatPrice } =
+    useContext(ShopContext); // Access formatPrice
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
@@ -54,10 +54,9 @@ const Cart = () => {
                     <div className="cart-image-details">
                       <h1>{product.name}</h1>
                       <h3>
-                        {currency}
-                        {product.price}
+                        {formatPrice(product.price)} {/* Use formatPrice */}
                       </h3>
-                      <p>{product.quantity}</p>
+                      <p>{item.quantity}</p>
                     </div>
                   </div>
                   <div className="cart-input-trash">

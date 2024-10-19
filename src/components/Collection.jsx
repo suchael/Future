@@ -11,7 +11,6 @@ const Collection = () => {
   const [sortOrder, setSortOrder] = useState("default");
   const [isLoading, setIsLoading] = useState(true);
 
-  // Toggle selected categories
   const toggleCategory = (e) => {
     const { value } = e.target;
     if (category.includes(value)) {
@@ -21,25 +20,21 @@ const Collection = () => {
     }
   };
 
-  // Memoized filtering and sorting logic
   const filteredProducts = useMemo(() => {
     let filtered = products;
 
-    // Apply search filter if search is not empty
     if (search.trim() !== "") {
       filtered = filtered.filter((product) =>
         product.name.toLowerCase().includes(search.toLowerCase())
       );
     }
 
-    // Apply category filter if any categories are selected
     if (category.length > 0) {
       filtered = filtered.filter((product) =>
         category.includes(product.category)
       );
     }
 
-    // Sorting logic
     if (sortOrder === "low-to-high") {
       filtered.sort((a, b) => a.price - b.price);
     } else if (sortOrder === "high-to-low") {
@@ -49,17 +44,16 @@ const Collection = () => {
     return filtered;
   }, [category, sortOrder, products, search]);
 
-  // Handle sorting
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
   };
-  //loading products
+
   useEffect(() => {
     setIsLoading(true);
-    // Simulate a delay for loading products
+
     setTimeout(() => {
       setIsLoading(false);
-    }, 500); // Adjust the delay to match actual data loading time
+    }, 500);
   }, [products]);
   useEffect(() => {
     const savedSortOrder = localStorage.getItem("sortOrder");

@@ -13,7 +13,7 @@ import Title from "../components/Title";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency, addToCart } = useContext(ShopContext);
+  const { products, formatPrice, addToCart } = useContext(ShopContext); // Access formatPrice
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState("");
 
@@ -28,7 +28,7 @@ const Product = () => {
 
   useEffect(() => {
     fetchProductData();
-  }, [productId, products]); // Add 'products' as a dependency
+  }, [productId, products]);
 
   return productData ? (
     <>
@@ -36,20 +36,18 @@ const Product = () => {
         <div className="product-display-sub">
           <div className="product-display-sub2">
             <div className="product-display-sub3">
-              {/* Display the list of images */}
               {productData.image.map((item, index) => (
                 <img
                   src={item}
                   key={index}
                   alt={`Product ${index}`}
                   className="image-display"
-                  onClick={() => setImage(item)} // Clicking on an image will set it as the main image
+                  onClick={() => setImage(item)} //
                 />
               ))}
             </div>
             <div className="main-and-text">
               <div className="product-main-image">
-                {/* Display the selected image */}
                 <img
                   src={image}
                   alt="Selected product"
@@ -57,15 +55,14 @@ const Product = () => {
                 />
               </div>
             </div>
-            {/* Image details */}
+
             <div className="product-details">
               <h1>
-                <span>Name:</span>
-                {productData.name}
+                <span>Name:</span> {productData.name}
               </h1>
               <h3>
-                <span>Price:</span>
-                {currency} {productData.price}
+                <span>Price:</span> {formatPrice(productData.price)}{" "}
+                {/* Use formatPrice */}
               </h3>
               <div className="star-images">
                 <FaStar />
@@ -76,12 +73,10 @@ const Product = () => {
                 <p>(1,334)</p>
               </div>
               <p>
-                <span>Features:</span>
-                {productData.features}
+                <span>Features:</span> {productData.features}
               </p>
               <p>
-                <span>Descriptions:</span>
-                {productData.description}
+                <span>Descriptions:</span> {productData.description}
               </p>
               <button onClick={() => addToCart(productData._id)}>
                 ADD TO CART
@@ -92,7 +87,7 @@ const Product = () => {
       </div>
       <div style={{ marginTop: "5rem" }}>
         <Title text1={"Related"} text2={"Projects"} />
-        {/* Related product section */}
+
         <RelatedProduct
           Category={productData.Category}
           subCategory={productData.subCategory || "defaultSubCategory"}

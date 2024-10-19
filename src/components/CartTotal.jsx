@@ -4,7 +4,7 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 
 const CartTotal = () => {
-  const { currency, deliveryFee, getCartAmount } = useContext(ShopContext);
+  const { deliveryFee, getCartAmount, formatPrice } = useContext(ShopContext);
 
   return (
     <div className="Total-cart-total">
@@ -15,22 +15,26 @@ const CartTotal = () => {
         <div className="cart-total-details">
           <h2>Subtotal:</h2>
           <p>
-            {currency} {getCartAmount()}.00
+            {/* Use formatPrice to display subtotal */}
+            {formatPrice(getCartAmount())}
           </p>
         </div>
         <hr />
         <div className="cart-total-details">
           <h2>Shipping Fee:</h2>
           <p>
-            {currency} {deliveryFee}.00
+            {/* Use formatPrice to display delivery fee */}
+            {formatPrice(deliveryFee)}
           </p>
         </div>
         <hr className="hr" />
         <div className="cart-total-details">
           <h1>Total:</h1>
           <b>
-            {currency}{" "}
-            {getCartAmount() === 0 ? 0 : getCartAmount() + deliveryFee}{" "}
+            {/* Use formatPrice to display total amount */}
+            {formatPrice(
+              getCartAmount() === 0 ? 0 : getCartAmount() + deliveryFee
+            )}
           </b>
         </div>
       </div>

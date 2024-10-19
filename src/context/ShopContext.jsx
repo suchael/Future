@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
-  const currency = "$";
+  const currency = "USD"; // Use currency code, e.g., 'USD'
   const deliveryFee = 7500;
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -59,6 +59,14 @@ const ShopContextProvider = (props) => {
     }, 0);
   };
 
+  // Format price function
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD", // Dynamic currency
+    }).format(price);
+  };
+
   const value = {
     products,
     currency,
@@ -73,6 +81,7 @@ const ShopContextProvider = (props) => {
     updateQuantity,
     getCartAmount,
     navigate,
+    formatPrice,
   };
 
   return (
