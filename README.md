@@ -63,4 +63,4 @@ npm run dev
 
 ## Contact
 
-Your Name - [your.email@example.com](aningwuchisom@gmail.com)
+Your Name - [aningwuchisom@gmail.com](aningwuchisom@gmail.com)
