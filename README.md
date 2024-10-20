@@ -56,11 +56,6 @@ npm run dev
 
 - Figma Design - (https://www.figma.com/design/0uBGXfjZLJsmxjTzjaSHIb/Gadget-store?node-id=38-630&m=dev)
 
-## Acknowledgements
-
-- Thanks to [GreatStack] for their guidance.
-- Inspiration from [Project](https://foreverbuy.in).
-
 ## Contact
 
 Your Name - [aningwuchisom@gmail.com](aningwuchisom@gmail.com)
