@@ -19,7 +19,7 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <SearchBar />
-      ``
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Tcollection />} />
