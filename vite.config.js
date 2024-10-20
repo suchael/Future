@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["react-router-dom"], // Add any other external dependencies if needed
+      external: ["prop-types"], // Add other packages as needed
     },
     sourcemap: true, // Optional: enables sourcemaps for easier debugging
   },
