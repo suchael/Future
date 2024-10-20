@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
 import { products } from "../assets/assets";
-import PropTypes from "prop-types";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-
+import PropTypes from "prop-types";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
