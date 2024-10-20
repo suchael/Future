@@ -7,6 +7,5 @@ export default defineConfig({
     rollupOptions: {
       external: ["prop-types"], // Add other packages as needed
     },
-    sourcemap: true, // Optional: enables sourcemaps for easier debugging
   },
 });
