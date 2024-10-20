@@ -1,5 +1,5 @@
 {
-  "name": "future-web",
+  "name": "backend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -37,5 +37,9 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "description": "## Description",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
 }

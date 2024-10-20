@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
@@ -20,6 +19,7 @@ const App = () => {
       <ToastContainer />
       <Navbar />
       <SearchBar />
+      ``
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Tcollection />} />
