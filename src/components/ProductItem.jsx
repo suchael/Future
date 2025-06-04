@@ -5,7 +5,7 @@ import PropTypes from "prop-types"; // Import PropTypes
 import "./../Styles/Newarrival.css";
 
 const ProductItem = ({ id, image, name, price }) => {
-  const { formatPrice } = useContext(ShopContext); // Get formatPrice from context
+  const { formatPrice } = useContext(ShopContext);
 
   return (
     <>
