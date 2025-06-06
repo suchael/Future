@@ -1,36 +1,23 @@
 # Project Title: FUTURE
 
+<h3>📸 Screenshots</h3>
+
+<p align="center">
+  <img src="./src/assets/screenshot.png" alt="Screenshot" width="300" />
+</p>
+
+
 ## Description
 
 Welcome to Future, the ultimate destination for gadget enthusiasts and tech aficionados! Our e-commerce platform is designed to provide a seamless shopping experience, showcasing a curated selection of the latest gadgets and electronics to meet all your tech needs.
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- Features
-- Technology Stack
-- UI/UX
+## Frontend Technology Stack
 
-## Installation
+- React(vite) 
+- Vanilla CSS
+- Javascript
 
-1. Clone the repository:
-   bash
-   git clone (https://github.com/yourusername/repo.git)
-
-2. Navigate to the project directory:
-   bash
-   cd FUTURE
-3. Install dependencies:
-   bash
-   npm install
-
-## Usage
-
-To start the project, run:
-
-bash
-npm run dev
 
 ## Features
 
@@ -46,16 +33,6 @@ npm run dev
 
 6. Customer Support: Our dedicated support team is available to assist you with any inquiries, product recommendations, or issues you may encounter.
 
-## Frontend Technology Stack
-
-- React(vite)
-- Vanilla CSS
-  -Javascript
-
-## UI/UX
-
-- Figma Design - (https://www.figma.com/design/0uBGXfjZLJsmxjTzjaSHIb/Gadget-store?node-id=38-630&m=dev)
-
 ## Contact
 
-Your Name - [aningwuchisom@gmail.com](aningwuchisom@gmail.com)
+ - [succhycomic@gmail.com](succhycomic@gmail.com)
